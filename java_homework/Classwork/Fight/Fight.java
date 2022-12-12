@@ -3,7 +3,6 @@ public class Fight {
 		Role[] RoleArray = {new Warrior("Warrior A"), new Warrior("Warrior B"), new Warrior("Warrior C"), 
 							new Mage("Mage A"), new Mage("Mage B"), new Mage("Mage C")};
 
-
 		boolean run = true;
 
 		for (int i=0;i<6;i++) {
@@ -17,10 +16,9 @@ public class Fight {
 			while (random_role_A == random_role_B) {
 				random_role_B = (int)((Math.random() * 10) % 6);
 			}
-			
 			if (run == true) {
 				if (RoleArray[random_role_A] instanceof Warrior) {
-					((Warrior)RoleArray[random_role_A]).NewMoon(RoleArray[random_role_B]);
+					((Warrior)RoleArray[random_role_A]).newMoon(RoleArray[random_role_B]);
 				}
 				else if (RoleArray[random_role_A] instanceof Mage) {
 					((Mage)RoleArray[random_role_A]).SmallFire(RoleArray[random_role_B]);
@@ -36,5 +34,4 @@ public class Fight {
 			}
 		}
 	}
-
 }
